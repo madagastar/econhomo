@@ -8,7 +8,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start; /* 改为 flex-start 以确保内容从顶部开始 */
             text-align: center;
             overflow-y: scroll;
             height: 100vh;
@@ -17,24 +17,24 @@
         }
         img {
             display: block;
-            margin: 0 auto;
+            margin: 20px auto; /* 添加 margin-top 以防图片紧贴其他内容 */
         }
         a {
             display: block;
             margin-top: 20px;
-        }        
+        }
     </style>
     <script>
- window.difyChatbotConfig = { 
-  token: 'SJpLgHT465sKEygW', 
-  baseUrl: 'https://chat.econhomo.com'
- }
-</script>
-<script
- src="https://chat.econhomo.com/embed.min.js"
- id="SJpLgHT465sKEygW"
- defer>
-</script>
+        window.difyChatbotConfig = { 
+            token: 'SJpLgHT465sKEygW', 
+            baseUrl: 'https://chat.econhomo.com'
+        }
+    </script>
+    <script
+        src="https://chat.econhomo.com/embed.min.js"
+        id="SJpLgHT465sKEygW"
+        defer>
+    </script>
 </head>
 <body>
     <h1>My 徐瑾经济人XUJIN Econhomo</h1>
