@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<html>
+<html lang="zh-CN">
 <head>
+    <meta charset="UTF-8">
     <title>My XUJIN Econhomo 徐瑾经济人</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff1e5; /* 添加背景颜色 */
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* 改为 flex-start 以确保内容从顶部开始 */
+            justify-content: flex-start; /* 确保内容从顶部开始 */
             text-align: center;
             overflow-y: scroll;
             height: 100vh;
             margin: 0;
-            background-color: #fff1e5; /* 添加背景颜色 */
         }
         img {
             display: block;
@@ -23,6 +26,32 @@
             display: block;
             margin-top: 20px;
         }
+        .stats-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 20px; /* 添加 margin-top 以防紧贴其他内容 */
+        }
+        .stats-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .stats-item {
+            font-size: 1.2em;
+            margin: 5px 0;
+            color: #555;
+        }
+        .stats-item span {
+            font-weight: 700;
+            color: #007bff;
+        }
+        .icon {
+            margin-right: 5px;
+            color: #007bff;
+        }
     </style>
     <script>
         window.difyChatbotConfig = { 
@@ -30,11 +59,7 @@
             baseUrl: 'https://chat.econhomo.com'
         }
     </script>
-    <script
-        src="https://chat.econhomo.com/embed.min.js"
-        id="kL14GnNTycZR84fn"
-        defer>
-    </script>
+    <script src="https://chat.econhomo.com/embed.min.js" id="kL14GnNTycZR84fn" defer></script>
     <script defer src="https://busuanzi.9420.ltd/js"></script>
 </head>
 <body>
@@ -49,7 +74,14 @@
     <p>微信搜索"econhomo"关注公众号</p>
     <p><a href="https://t.zsxq.com/10JoZL5zk">我正在「徐瑾读书圈」和朋友们讨论有趣的话题，你⼀起来吧？</a></p>
     <p><a href="https://t.zsxq.com/100vD8WYu">我正在「徐瑾财经圈」和朋友们讨论有趣的话题，你⼀起来吧？</a></p>
-    <p>本站总访问量 <span id="busuanzi_site_pv"></span> 次</p>
-    <p>本站总访客数 <span id="busuanzi_site_uv"></span> 人</p>
+    <div class="stats-container">
+        <div class="stats-title">网站访问统计</div>
+        <div class="stats-item">
+            <i class="fas fa-eye icon"></i>本站总访问量 <span id="busuanzi_site_pv"></span> 次
+        </div>
+        <div class="stats-item">
+            <i class="fas fa-user icon"></i>本站总访客数 <span id="busuanzi_site_uv"></span> 人
+        </div>
+    </div>
 </body>
 </html>
