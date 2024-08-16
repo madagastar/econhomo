@@ -102,24 +102,33 @@
     <script>
         // 页面加载时执行
         window.onload = function() {
-            const imageContainer = document.getElementById("imageContainer");
-
-            // 显示图片5秒后自动隐藏
-            setTimeout(() => {
-                imageContainer.classList.add("hidden");
-            }, 5000); // 5000毫秒 = 5秒
-
-            // 点击图片容器时重新显示图片
-            imageContainer.addEventListener("click", function() {
-                imageContainer.classList.remove("hidden");
-                
-                // 重新设置5秒后隐藏
-                setTimeout(() => {
-                    imageContainer.classList.add("hidden");
-                }, 5000);
-            });
+            const imageContainer = document.querySelector(".image-container");
+            const image = document.querySelector(".image-container img");
+        
+            if (imageContainer && image) {
+                image.onload = function() {
+                    console.log("Image loaded"); // 调试用
+                    setTimeout(() => {
+                        imageContainer.classList.add("hidden");
+                        console.log("Image hidden"); // 调试用
+                    }, 5000);
+                };
+        
+                imageContainer.addEventListener("click", function() {
+                    imageContainer.classList.remove("hidden");
+                    console.log("Image shown"); // 调试用
+                    
+                    setTimeout(() => {
+                        imageContainer.classList.add("hidden");
+                        console.log("Image hidden again"); // 调试用
+                    }, 5000);
+                });
+            } else {
+                console.error("Image container or image not found"); // 调试用
+            }
         };
     </script>
+    
     <h1><a href="https://www.ftchineselive.com/column/007000049">徐瑾经济人-FT中文网</a></h1>
     <p><a href="https://www.ftchineselive.com/column/007000049">XUJIN Econhomo@FTchinese website</a></p>
     <h1><a href="https://new.qq.com/omn/author/8QIf3n5f74cauzzZ4Ac%3D">徐瑾经济人-腾讯网</a></h1>
