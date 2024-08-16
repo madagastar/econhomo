@@ -6,11 +6,7 @@
     
     <!-- 引入 Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- 引入自托管的 Roboto 字体 -->
-    <link href="https://cdn.jsdelivr.net/npm/roboto-fontface/fonts/roboto/Roboto-Regular.woff2" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/roboto-fontface/fonts/roboto/Roboto-Bold.woff2" rel="stylesheet" />
-    
+        
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -60,26 +56,6 @@
             margin-right: 5px;
             color: #007bff;
         }
-        .image-container {
-            position: relative;
-            height: 80%;
-            max-width: 640px;
-            /* 如果需要限制高度，可以使用 max-height */
-            max-height: 80vh; /* 视口高度的 80% */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }     
-        .image-container img {
-            max-width: auto;
-            height: 100%;
-            object-fit: contain;
-        }
-        .hidden {
-            opacity: 0;
-            height: 0;
-            /* overflow: hidden */;
-        }
     </style>
     
     <script>
@@ -96,39 +72,9 @@
     <h1>My XUJIN Econhomo 徐瑾经济人</h1>
     <div id="imageContainer" class="image-container">
         <a href="https://product.dangdang.com/29765232.html">
-            <img src="640.webp" alt="货币简史" id="image">
+            <img src="640.webp" alt="货币简史" width=320 id="image">
         </a>
-    </div>
-    <script>
-        // 页面加载时执行
-        window.onload = function() {
-            const imageContainer = document.querySelector(".image-container");
-            const image = document.querySelector(".image-container img");
-        
-            if (imageContainer && image) {
-                image.onload = function() {
-                    console.log("Image loaded"); // 调试用
-                    setTimeout(() => {
-                        imageContainer.classList.add("hidden");
-                        console.log("Image hidden"); // 调试用
-                    }, 5000);
-                };
-        
-                imageContainer.addEventListener("click", function() {
-                    imageContainer.classList.remove("hidden");
-                    console.log("Image shown"); // 调试用
-                    
-                    setTimeout(() => {
-                        imageContainer.classList.add("hidden");
-                        console.log("Image hidden again"); // 调试用
-                    }, 5000);
-                });
-            } else {
-                console.error("Image container or image not found"); // 调试用
-            }
-        };
-    </script>
-    
+    </div> 
     <h1><a href="https://www.ftchineselive.com/column/007000049">徐瑾经济人-FT中文网</a></h1>
     <p><a href="https://www.ftchineselive.com/column/007000049">XUJIN Econhomo@FTchinese website</a></p>
     <h1><a href="https://new.qq.com/omn/author/8QIf3n5f74cauzzZ4Ac%3D">徐瑾经济人-腾讯网</a></h1>
