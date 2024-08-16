@@ -27,6 +27,8 @@
         img {
             display: block;
             margin: 20px auto;
+            max-width: 100%; /* 确保图片在小屏幕上不会超出屏幕宽度 */
+            height: auto; /* 保持图片比例 */
         }
         a {
             display: block;
@@ -60,7 +62,8 @@
         }
         .image-container {
             position: relative;
-            width: 640px; /* 根据你的图片宽度调整 */
+            width: 100%; /* 确保容器宽度为100% */
+            max-width: 640px; /* 最大宽度为640px */
             overflow: hidden;
             cursor: pointer; /* 鼠标悬停时显示手型 */
         }
@@ -91,7 +94,7 @@
     <h1>My XUJIN Econhomo 徐瑾经济人</h1>
     <div id="imageContainer" class="image-container">
         <a href="https://product.dangdang.com/29765232.html">
-            <img src="640.webp" width="640" alt="货币简史" id="image">
+            <img src="640.webp" alt="货币简史" id="image">
         </a>
     </div>
     <script>
