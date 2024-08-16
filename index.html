@@ -27,8 +27,8 @@
         img {
             display: block;
             margin: 20px auto;
-            max-width: 100%; /* 确保图片在小屏幕上不会超出屏幕宽度 */
-            height: auto; /* 保持图片比例 */
+            max-width: 100%;
+            height: auto;
         }
         a {
             display: block;
@@ -62,20 +62,19 @@
         }
         .image-container {
             position: relative;
-            width: 100%; /* 确保容器宽度为100% */
-            max-width: 640px; /* 最大宽度为640px */
+            width: 100%;
+            max-width: 640px;
             overflow: hidden;
-            cursor: pointer; /* 鼠标悬停时显示手型 */
+            cursor: pointer;
         }
-
         .image-container img {
             width: 100%;
+            height: auto; /* 确保图片保持比例 */
             transition: opacity 0.5s ease;
         }
-
         .hidden {
             opacity: 0;
-            height: 0; /* 隐藏时高度为0 */
+            height: 0;
             overflow: hidden;
         }
     </style>
