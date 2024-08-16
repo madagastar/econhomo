@@ -72,7 +72,7 @@
 
         .hidden {
             opacity: 0;
-            height: 300; /* 隐藏时高度为0 */
+            height: 0; /* 隐藏时高度为0 */
             overflow: hidden;
         }
     </style>
@@ -90,32 +90,31 @@
 <body>
     <h1>My XUJIN Econhomo 徐瑾经济人</h1>
     <div id="imageContainer" class="image-container">
-    <a href="https://product.dangdang.com/29765232.html">
-        <img src="640.webp" width="640" alt="货币简史">
-    </a>
+        <a href="https://product.dangdang.com/29765232.html">
+            <img src="640.webp" width="640" alt="货币简史" id="image">
+        </a>
     </div>
     <script>
-    // 页面加载时执行
-    window.onload = function() {
-        const imageContainer = document.getElementById("imageContainer");
-        const image = document.getElementById("image");
+        // 页面加载时执行
+        window.onload = function() {
+            const imageContainer = document.getElementById("imageContainer");
 
-        // 显示图片5秒后自动隐藏
-        setTimeout(() => {
-            imageContainer.classList.add("hidden");
-        }, 5000); // 5000毫秒 = 5秒
-
-        // 点击图片容器时重新显示图片
-        imageContainer.addEventListener("click", function() {
-            imageContainer.classList.remove("hidden");
-            
-            // 重新设置5秒后隐藏
+            // 显示图片5秒后自动隐藏
             setTimeout(() => {
                 imageContainer.classList.add("hidden");
-            }, 5000);
-        });
-    };
-</script>
+            }, 5000); // 5000毫秒 = 5秒
+
+            // 点击图片容器时重新显示图片
+            imageContainer.addEventListener("click", function() {
+                imageContainer.classList.remove("hidden");
+                
+                // 重新设置5秒后隐藏
+                setTimeout(() => {
+                    imageContainer.classList.add("hidden");
+                }, 5000);
+            });
+        };
+    </script>
     <h1><a href="https://www.ftchineselive.com/column/007000049">徐瑾经济人-FT中文网</a></h1>
     <p><a href="https://www.ftchineselive.com/column/007000049">XUJIN Econhomo@FTchinese website</a></p>
     <h1><a href="https://new.qq.com/omn/author/8QIf3n5f74cauzzZ4Ac%3D">徐瑾经济人-腾讯网</a></h1>
@@ -125,8 +124,6 @@
     </a>
     <p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA3ODgzODAzNA==&action=getalbum&album_id=1633953453712474120">微信搜索"econhomo"，关注公众号</a></p>
     <p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2MjA3NjU2OQ==&action=getalbum&album_id=1926144658619842560">微信搜索"jinfinance"，关注备用号</a></p>
-</div>
-
     <p><a href="https://t.zsxq.com/10JoZL5zk">我正在「徐瑾读书圈」和朋友们讨论有趣的话题，你⼀起来吧？</a></p>
     <p><a href="https://t.zsxq.com/100vD8WYu">我正在「徐瑾财经圈」和朋友们讨论有趣的话题，你⼀起来吧？</a></p>
     <div class="stats-container">
