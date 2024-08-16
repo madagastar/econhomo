@@ -64,13 +64,16 @@
             position: relative;
             width: 100%;
             max-width: 640px;
-             /* overflow: hidden; */
-            cursor: pointer;
-        }
+            /* 如果需要限制高度，可以使用 max-height */
+            max-height: 80vh; /* 视口高度的 80% */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }     
         .image-container img {
-            width: 100%;
-            height: auto; /* 确保图片保持比例 */
-            transition: opacity 0.5s ease;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
         }
         .hidden {
             opacity: 0;
