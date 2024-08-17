@@ -13,8 +13,8 @@
             background-color: #fff1e5; /* 保持原背景色 */
             display: flex;
             margin: 0;
-            height: 100vh;
-            overflow: hidden; /* 隐藏滚动条 */
+            min-height: 100vh; /* 设置最小高度为视口高度 */
+            overflow: auto; /* 允许滚动 */
         }
         .sidebar {
             width: 250px; /* 边栏宽度 */            
@@ -40,7 +40,7 @@
             margin-left: 250px; /* 初始左边距 */            
             transition: margin-left 0.3s; /* 平滑过渡 */
             overflow-y: auto; /* 允许内容区滚动 */
-            min-height: 100vh; /* 设置内容区高度 */
+            min-height: 100vh; /* 设置内容区最小高度 */
             display: flex;
             flex-direction: column; /* 纵向排列内容 */
             align-items: center; /* 水平居中 */
@@ -156,8 +156,7 @@
             <div class="stats-item">
                 <i class="fas fa-user icon"></i>本站总访客数 <span id="busuanzi_value_site_uv"></span> 人
             </div>
-               </i>感谢您的访问
-            </div>
+            <div class="stats-item">感谢您的访问</div>
         </div>
     </div>
 
