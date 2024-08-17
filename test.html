@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>My XUJIN Econhomo 徐瑾经济人</title>
+    
+    <!-- 引入 Font Awesome，用于图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+    <style>
+        /* 设置页面基本样式 */
+        body {           
+            background-color: #fff1e5; /* 背景颜色 */
+            display: flex; /* 使用弹性盒布局 */
+            flex-direction: column; /* 垂直排列 */
+            align-items: center; /* 水平居中 */
+            overflow-y: scroll; /* 垂直滚动条 */                 
+        }
+        .stats-container {
+            background-color: #fff; /* 背景颜色 */
+            padding: 20px; /* 内边距20px */
+            border-radius: 10px; /* 圆角 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+            text-align: center; /* 文本居中 */
+            margin-top: 10px; /* 上外边距20px */
+        }
+        .stats-title {
+            font-size: 1.5em; /* 字体大小 */
+            margin-bottom: 10px; /* 下外边距10px */
+            color: #333; /* 字体颜色 */
+        }
+        .stats-item {
+            font-size: 1.2em; /* 字体大小 */
+            margin: 5px 0; /* 上下外边距5px */
+            color: #555; /* 字体颜色 */
+        }
+        .stats-item span {
+            font-weight: 700; /* 加粗 */
+            color: #007bff; /* 字体颜色 */
+        }
+        .icon {
+            margin-right: 5px; /* 右外边距5px */
+            color: #007bff; /* 图标颜色 */
+        }
+    </style>
+    
+    <script>
+        // 配置 Dify 聊天机器人
+        window.difyChatbotConfig = { 
+            token: 'KVREJ1Uix1eB3aPS', // 令牌
+            baseUrl: 'https://dify.econhomo.com' // 基础 URL
+        }
+    </script>
+    <!-- 引入 Dify 聊天机器人脚本 -->
+    <script src="https://dify.econhomo.com/embed.min.js" id="KVREJ1Uix1eB3aPS" defer></script>
+    <!-- 引入访问统计脚本 -->
+    <script defer src="https://vercount.econhomo.com/js"></script>
+    <!-- 引入 Umami 分析脚本 -->
+    <script defer src="https://umami.econhomo.com/script.js" data-website-id="97992d41-6b1f-4acc-b1f8-5df813eadbe3"></script>
+</head>
+<body>
+    <h1>My XUJIN Econhomo 徐瑾经济人</h1>
+    
+    <div id="imageContainer" class="image-container">
+        <!-- 链接到图书页面 -->
+        <a href="https://product.dangdang.com/29765232.html">
+            <img src="640.webp" alt="货币简史" width="480" id="image">
+        </a>
+    </div> 
+    
+    <!-- FT中文网链接 -->
+    <h1><a href="https://www.ftchineselive.com/column/007000049">徐瑾经济人-FT中文网</a></h1>
+    <p><a href="https://www.ftchineselive.com/column/007000049">XUJIN Econhomo@FTchinese website</a></p>
+    
+    <!-- 腾讯网链接 -->
+    <h1><a href="https://new.qq.com/omn/author/8QIf3n5f74cauzzZ4Ac%3D">徐瑾经济人-腾讯网</a></h1>
+    <p><a href="https://new.qq.com/omn/author/8QIf3n5f74cauzzZ4Ac%3D">XUJIN Econhomo@TencentNews website</a></p>
+    
+    <!-- 财经女作家的斜杠人生图片 -->
+    <a href="https://fisf.fudan.edu.cn/show-192-3879.html">
+        <img src="https://fisf.fudan.edu.cn/uploads/image/20190715/20190715023950_40884.jpg" alt="财经女作家的斜杠人生">
+    </a>
+    
+    <!-- 微信公众号链接 -->
+    <p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA3ODgzODAzNA==&action=getalbum&album_id=1633953453712474120">微信搜索"econhomo"，关注公众号</a></p>
+    <p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2MjA3NjU2OQ==&action=getalbum&album_id=1926144658619842560">微信搜索"jinfinance"，关注备用号</a></p>
+    
+    <!-- 讨论圈链接 -->
+    <p><a href="https://t.zsxq.com/10JoZL5zk">我正在「徐瑾读书圈」和朋友们讨论有趣的话题，你⼀起来吧？</a></p>
+    <p><a href="https://t.zsxq.com/100vD8WYu">我正在「徐瑾财经圈」和朋友们讨论有趣的话题，你⼀起来吧？</a></p>
+    
+    <!-- 网站访问统计 -->
+    <div class="stats-container">
+        <div class="stats-title">网站访问统计</div>
+        <div class="stats-item">
+            <i class="fas fa-eye icon"></i>本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+        </div>
+        <div class="stats-item">
+            <i class="fas fa-user icon"></i>本站总访客数 <span id="busuanzi_value_site_uv"></span> 人
+        </div>
+    </div>
+</body>
+</html>
