@@ -26,6 +26,7 @@
             left: 0;
             top: 0;
             height: 100%; /* 充满整个高度 */
+            overflow-y: auto; /* 允许边栏滚动 */
             transition: transform 0.3s; /* 平滑过渡 */
             transform: translateX(0); /* 初始状态 */
         }
@@ -37,6 +38,8 @@
             padding: 20px; /* 内边距 */
             margin-left: 250px; /* 初始左边距 */
             transition: margin-left 0.3s; /* 平滑过渡 */
+            overflow-y: auto; /* 允许内容区滚动 */
+            height: 100vh; /* 设置内容区高度 */
         }
         .content.shifted {
             margin-left: 0; /* 隐藏边栏时的左边距 */
