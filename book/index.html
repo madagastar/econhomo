@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Econhomo book club 经济人读书会</title>
+    
+    <!-- 引入 Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff1e5; /* 保持原背景色 */
+            display: flex;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden; /* 隐藏滚动条 */
+        }
+        .sidebar {
+            width: 250px; /* 边栏宽度 */            
+            background-color: #34495e; /* 深蓝色背景 */
+            color: #ecf0f1; /* 浅色文字 */
+            padding: 20px; /* 内边距 */
+            padding-top: 60px; /* 增加顶部内边距，避免与按钮重叠 */
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+            position: fixed; /* 固定位置 */
+            left: 0;
+            top: 0;
+            height: 100%; /* 充满整个高度 */
+            overflow-y: auto; /* 允许边栏滚动 */
+            transition: transform 0.3s; /* 平滑过渡 */
+            transform: translateX(0); /* 初始状态 */
+        }
+        .sidebar.hidden {
+            transform: translateX(-100%); /* 隐藏状态 */
+        }
+        .content {
+            flex: 1; /* 自适应宽度 */
+            padding: 20px; /* 内边距 */
+            margin-left: 250px; /* 初始左边距 */            
+            transition: margin-left 0.3s; /* 平滑过渡 */
+            overflow-y: auto; /* 允许内容区滚动 */
+            min-height: 100vh; /* 设置内容区高度 */
+            display: flex;
+            flex-direction: column; /* 纵向排列内容 */
+            align-items: center; /* 水平居中 */
+        }
+        .content.shifted {
+            margin-left: 0; /* 隐藏边栏时的左边距 */
+        }
+        .toggle-button {
+            position: absolute;
+            top: 10px;
+            left: 10px; /* 更靠左的位置 */
+            background-color: #2980b9; /* 按钮背景色 */
+            color: white; /* 按钮文字颜色 */
+            border: none;
+            padding: 5px 10px; /* 缩小内边距 */
+            cursor: pointer;
+            border-radius: 5px; /* 圆角 */
+            z-index: 1000; /* 确保按钮在最上层 */
+            transition: background-color 0.3s; /* 背景色过渡 */
+        }
+        .toggle-button:hover {
+            background-color: #3498db; /* 悬停时的颜色 */
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            display: block;
+            margin-top: 15px;
+            color: #ecf0f1; /* 浅色链接 */
+            text-decoration: none; /* 去掉下划线 */
+            transition: color 0.3s; /* 颜色过渡 */
+        }
+        a:hover {
+            color: #3498db; /* 悬停时的颜色 */
+        }
+        .stats-container {
+            background-color: #ffffff; /* 白色背景 */
+            padding: 10px; /* 减小内边距 */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 20px;
+            max-width: 300px; /* 设置最大宽度 */
+            margin-left: auto; /* 居中 */
+            margin-right: auto; /* 居中 */
+        }
+        .stats-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333; /* 深色标题 */
+        }
+        .stats-item {
+            font-size: 1.2em;
+            margin: 5px 0;
+            color: #555; /* 深灰色文字 */
+        }
+        .stats-item span {
+            font-weight: 700;
+            color: #2980b9; /* 强调的颜色 */
+        }
+        .icon {
+            margin-right: 5px;
+            color: #2980b9; /* 图标颜色 */
+        }
+        .sidebar h2, .sidebar h3 {
+            margin-top: 50px; /* 增加上边距以避免重叠 */
+        }
+    </style>
+
+</head>
+<body>
+    <button class="toggle-button">书单链接</button>
+    
+    <div class="sidebar" id="sidebar">
+        <p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU2NjY2MjIwOA==&action=getalbum&album_id=1369165319742373888">最近月度书单</a></p>
+        <p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA3ODgzODAzNA==&action=getalbum&album_id=3234726760433369094">2023十大好书</a></p>
+    </div>
+    
+    <div class="content" id="content">
+        <h1 style="text-align: center;">Econhomo Book Club 经济人读书会</h1>
+        <a href="https://XXX">
+            <img src="XXX" alt="经济人读书会logo">
+        </a>
+               </i>感谢您的访问
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toggleButton = document.querySelector('.toggle-button');
+        const sidebar = document.getElementById('sidebar');
+        const content = document.getElementById('content');
+
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden'); // 切换边栏可见性
+            content.classList.toggle('shifted'); // 切换内容区位置
+        });
+    </script>
+</body>
+</html>
